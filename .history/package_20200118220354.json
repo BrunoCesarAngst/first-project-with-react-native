@@ -37,5 +37,5 @@
   "jest": {
     "preset": "react-native"
   },
-  { "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } } }
+  "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } }
 }

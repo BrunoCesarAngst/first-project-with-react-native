@@ -35,5 +35,10 @@ module.exports = {
         message: 'Unexpected property on console object was called',
       },
     ],
+    'no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+    ],
+    'react/state-in-constructor': ['error', 'never'],
   },
 };
