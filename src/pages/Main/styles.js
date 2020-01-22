@@ -49,7 +49,7 @@ export const Avatar = styled.Image`
   width: 64px;
   height: 64px;
   border-radius: 32px;
-  background: #eee;
+  background: #Eee;
 `;
 
 export const Name = styled.Text`
@@ -65,7 +65,7 @@ export const Bio = styled.Text.attrs({
 })`
   font-size: 13px;
   line-height: 18px;
-  color:#999;
+  color: #999;
   margin-top: 5px;
   text-align: center;
 `;

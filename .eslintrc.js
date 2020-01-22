@@ -40,5 +40,6 @@ module.exports = {
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
     ],
     'react/state-in-constructor': ['error', 'never'],
+    'react/static-property-placement': ['error', 'static public field'],
   },
 };
