@@ -298,3 +298,22 @@ src
 │       └── styles.js
 └── routes.js
 ```
+
+## Estilizando formulário
+
+Trabalhamos no arquivo index.js da pasta pages/Main
+
+Adicionar icons
+
+```bash
+yarn add react-native-vector-icons
+# instalando ícones em forma de vetor
+```
+
+para ios vamos em ios/MyApp/Info.plist e de [List of all available fonts to copy & paste in info.plist](https://github.com/oblador/react-native-vector-icons#ios) dento da documentação do react-native-vector-icons copiamos e colamos antes de fechar a tag dict desse arquivo
+
+para android vamos em android/app/build.gradle e de [To customize the files being copied, add the following instead:](https://github.com/oblador/react-native-vector-icons#android) dento da documentação do react-native-vector-icons copiamos e colamos antes último apply desse arquivo.
+
+E rodar react-native run-android
+
+Para procurar os ícone do pacote [MaterialIcons](https://oblador.github.io/react-native-vector-icons/) por exemplo

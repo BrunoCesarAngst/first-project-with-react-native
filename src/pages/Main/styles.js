@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+// um botão retangular
 import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
@@ -8,15 +9,18 @@ export const Container = styled.View`
 `;
 
 export const Form = styled.View`
+  /* input e button um do lado do outro */
   flex-direction: row;
   padding-bottom: 20px;
-  border-bottom-width: 3px;
+  border-bottom-width: 4px;
   border-color: #eee;
 `;
 
 export const Input = styled.TextInput.attrs({
+  // trazendo um atributo do input
   placeholderTextColor: '#999',
 })`
+  /* ocupando toda a largura descontando o botão */
   flex: 1;
   height: 40px;
   background: #eee;
@@ -25,9 +29,12 @@ export const Input = styled.TextInput.attrs({
   border: 1px solid #eee;
 `;
 
+/* estilizando componentes que não são de nossa aplicação importadas de outras ferramentas */
 export const SubmitButton = styled(RectButton)`
+  /* alinhando todo o conteúdo dentro do botão */
   justify-content: center;
   align-items: center;
+  /*  */
   background: #7259c1;
   border-radius: 4px;
   margin-left: 10px;
