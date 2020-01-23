@@ -274,3 +274,27 @@ Partimos para configurar o arquivo Routes.js, instalamos o tipo de navegação
 ```bash
 yarn add react-navigation-stack
 ```
+
+## Configurando StatusBar
+
+Trabalhamos sua configuração no arquivo Routes.js
+
+## Styled Components
+
+```bash
+yarn add styled-components
+
+# criamos os arquivos styles.js nas pastas das páginas
+src
+├── config
+│   └── ReactotronConfig.js
+├── index.js
+├── pages
+│   ├── Main
+│   │   ├── index.js
+│   │   └── styles.js # e trabalhamos nesses aquivos para gerar os estilos
+│   └── User
+│       ├── index.js
+│       └── styles.js
+└── routes.js
+```

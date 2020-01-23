@@ -1,4 +1,5 @@
 import React from 'react';
+// Status bar é um componente
 import { StatusBar } from 'react-native';
 import 'react-native-gesture-handler';
 
@@ -9,7 +10,9 @@ import Routes from './routes';
 
 export default function App() {
   return (
+    // usando fragment
     <>
+      {/** mudamos a cor da fonte e o background padrão do android */}
       <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
       <Routes />
     </>
