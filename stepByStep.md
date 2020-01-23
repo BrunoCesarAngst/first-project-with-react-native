@@ -246,3 +246,31 @@ src
              # importamos o arquivo do Reactotron
 # No index.js da rais do projeto mudo a importação do App para a pasta src.
 ```
+
+## React Navigation
+
+Criamos uma estrutura de pastas com as páginas específicas com o arquivo index.js dentro.
+
+```bash
+src
+├── config
+│   └── ReactotronConfig.js
+├── index.js
+├── pages
+│   ├── Main
+│   │   └── index.js
+│   └── Repository
+│       └── index.js
+└── Routes.js
+# Adicionamos a biblioteca react-navigation que configura a roteamento/navegação
+yarn add react-navigation
+```
+
+O [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) muda constantemente e é de suma importância seguir o passo a passo da documentação para a instalação.
+E depois de seguir o passo a passo rodar react-native run android ou ios.
+
+Partimos para configurar o arquivo Routes.js, instalamos o tipo de navegação
+
+```bash
+yarn add react-navigation-stack
+```
