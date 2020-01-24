@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// Keyboard é o teclado
+// Keyboard é o teclado e ActivityIndicator é o sinal de loading
 import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 // importando ícone/informando o nome do pacote que queremos utilizar
@@ -33,6 +33,7 @@ export default class Main extends Component {
     newUser: '',
     // os usuários
     users: [],
+    // Carregado
     loading: false,
   };
 
@@ -59,6 +60,7 @@ export default class Main extends Component {
     /**
      * setState() agenda uma atualização para o objeto state de um componente.
      * Quando o state muda, o componente responde renderizando novamente.
+     * carregado
      */
     this.setState({ loading: true });
 
@@ -78,6 +80,7 @@ export default class Main extends Component {
       users: [...users, data],
       // setando o input como vazio
       newUser: '',
+      // carregado
       loading: false,
     });
 
@@ -110,8 +113,9 @@ export default class Main extends Component {
             /* mostrar qual método vai ser usado quando send */
             onSubmitEditing={this.handleAddUser}
           />
-          {/* ouvindo o click do botão */}
+          {/* recebendo o loading e ouvindo o click do botão */}
           <SubmitButton loading={loading} onPress={this.handleAddUser}>
+            {/* usando um if ternário, se loading ActivityInd... senão Icon */}
             {loading ? (
               <ActivityIndicator color="#FFF" />
             ) : (

@@ -345,4 +345,8 @@ src
 
 ## Estilizando listagem
 
-No index.js da Main criamos o component `<List />`
+No index.js da Main criamos o component `<List />` com os dados de cada usuário e estilizamos a lista.
+
+## Loading e disabled
+
+No index.js da Main aplicamos o loading e o estilizamos
