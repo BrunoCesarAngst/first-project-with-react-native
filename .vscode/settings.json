@@ -27,8 +27,14 @@
     "__tests__": false,
     "node_modules/": false
   },
-  "cSpell.words": [
-    "firstprojectwithreactnative",
-    "webview"
-  ]
+  "cSpell.words": ["firstprojectwithreactnative", "webview"],
+  "workbench.colorCustomizations": {
+    "[Name of the Current Theme you are using]": {
+      "titleBar.activeBackground": "#191919cc",
+      "titleBar.activeForeground": "#ffffff"
+    },
+    "activityBar.background": "#063335",
+    "titleBar.activeBackground": "#08474A",
+    "titleBar.activeForeground": "#EEFCFD"
+  }
 }

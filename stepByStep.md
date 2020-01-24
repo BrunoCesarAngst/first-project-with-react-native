@@ -317,3 +317,28 @@ para android vamos em android/app/build.gradle e de [To customize the files bein
 E rodar react-native run-android
 
 Para procurar os ícone do pacote [MaterialIcons](https://oblador.github.io/react-native-vector-icons/) por exemplo
+
+## Acessando API do Github
+
+No index.js da Main preparamos a aplicação para receber os dados do input, como o state os métodos/funções que trabalharão com esses dados e configuramos o próprio input.
+
+Usaremos o Axios para fazer a chamada a api
+
+```bash
+yarn add axios
+
+src
+├── config
+│   └── ReactotronConfig.js
+├── index.js
+├── pages
+│   ├── Main
+│   │   ├── index.js
+│   │   └── styles.js
+│   └── User
+│       ├── index.js
+│       └── styles.js
+├── routes.js
+└── services
+    └── api.js # e criamos o arquivo com essa configuração
+```

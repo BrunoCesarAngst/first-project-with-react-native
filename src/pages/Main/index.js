@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+// Keyboard é o teclado
 import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 // importando ícone/informando o nome do pacote que queremos utilizar
@@ -28,7 +29,9 @@ export default class Main extends Component {
   };
 
   state = {
+    // armazenando o valor do input
     newUser: '',
+    // os usuários
     users: [],
     loading: false,
   };
@@ -49,13 +52,20 @@ export default class Main extends Component {
     }
   }
 
+  // lidando com a adição de usuário
   handleAddUser = async () => {
     const { users, newUser } = this.state;
 
+    /**
+     * setState() agenda uma atualização para o objeto state de um componente.
+     * Quando o state muda, o componente responde renderizando novamente.
+     */
     this.setState({ loading: true });
 
+    // buscando o usuário do github
     const response = await api.get(`/users/${newUser}`);
 
+    // pegando alguns dados do usuário
     const data = {
       name: response.data.name,
       login: response.data.login,
@@ -64,11 +74,14 @@ export default class Main extends Component {
     };
 
     this.setState({
+      // incluindo o usuário no array de usuários
       users: [...users, data],
+      // setando o input como vazio
       newUser: '',
       loading: false,
     });
 
+    // para tirar o teclado depois do send
     Keyboard.dismiss();
   };
 
@@ -79,6 +92,7 @@ export default class Main extends Component {
   };
 
   render() {
+    // buscando os dados no state
     const { users, newUser, loading } = this.state;
 
     return (
@@ -89,10 +103,14 @@ export default class Main extends Component {
             autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
+            /* recebendo o texto do input */
             onChangeText={text => this.setState({ newUser: text })}
+            /* usando o teclado para enviar */
             returnKeyType="send"
+            /* mostrar qual método vai ser usado quando send */
             onSubmitEditing={this.handleAddUser}
           />
+          {/* ouvindo o click do botão */}
           <SubmitButton loading={loading} onPress={this.handleAddUser}>
             {loading ? (
               <ActivityIndicator color="#FFF" />
@@ -111,6 +129,7 @@ export default class Main extends Component {
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
+              {/* ouvindo o click do botão */}
               <ProfileButton onPress={() => this.handleNavigate(item)}>
                 <ProfileButtonText>Ver perfil</ProfileButtonText>
               </ProfileButton>
