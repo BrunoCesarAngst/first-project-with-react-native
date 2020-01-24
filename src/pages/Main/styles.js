@@ -43,6 +43,7 @@ export const SubmitButton = styled(RectButton)`
 `;
 
 export const List = styled.FlatList.attrs({
+  // tirando a barra de rolagem
   showsVerticalScrollIndicator: false,
 })`
   margin-top: 20px;
@@ -57,6 +58,7 @@ export const Avatar = styled.Image`
   width: 64px;
   height: 64px;
   border-radius: 32px;
+  /* enquanto não carrega a imagem aplicar um fundo */
   background: #eee;
 `;
 
@@ -65,10 +67,12 @@ export const Name = styled.Text`
   color: #333;
   font-weight: bold;
   margin-top: 5px;
+  /* para forçar mesmo quando for mais que uma linha */
   text-align: center;
 `;
 
 export const Bio = styled.Text.attrs({
+  // limitando o número de linhas
   numberOfLines: 2,
 })`
   font-size: 13px;
@@ -80,6 +84,7 @@ export const Bio = styled.Text.attrs({
 
 export const ProfileButton = styled(RectButton)`
   margin-top: 10px;
+  /* ocupar a largura total */
   align-self: stretch;
   border-radius: 4px;
   background: #7159c1;

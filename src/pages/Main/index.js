@@ -120,11 +120,16 @@ export default class Main extends Component {
           </SubmitButton>
         </Form>
 
+        {/* criando a listagem de usuários */}
         <List
+          // onde estão os dados da minha lista
           data={users}
+          /* Usado para extrair uma chave exclusiva para um determinado item no índice especificado. A chave é usada para armazenar em cache e como chave de reação para rastrear o pedido novamente de itens. */
           keyExtractor={user => user.login}
+          // cada dado dentro de const data
           renderItem={({ item }) => (
             <User>
+              {/* passando um objeto dentro de um código js */}
               <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>

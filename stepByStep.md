@@ -342,3 +342,7 @@ src
 └── services
     └── api.js # e criamos o arquivo com essa configuração
 ```
+
+## Estilizando listagem
+
+No index.js da Main criamos o component `<List />`
