@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // Keyboard é o teclado e ActivityIndicator é o sinal de loading
 import { Keyboard, ActivityIndicator } from 'react-native';
+// Para salvar os dados no device
 import AsyncStorage from '@react-native-community/async-storage';
 // importando ícone/informando o nome do pacote que queremos utilizar
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -37,18 +38,22 @@ export default class Main extends Component {
     loading: false,
   };
 
+  // buscando os dados no banco
   async componentDidMount() {
     const users = await AsyncStorage.getItem('users');
 
     if (users) {
+      // carregando do AsyncStorage para users convertendo para JSON
       this.setState({ users: JSON.parse(users) });
     }
   }
 
+  // se tiver alterações em users pegando state antes dele receber a atualização
   componentDidUpdate(_, prevState) {
     const { users } = this.state;
 
     if (prevState.users !== users) {
+      // salvando os dados no AsyncStorage convertendo para string
       AsyncStorage.setItem('users', JSON.stringify(users));
     }
   }

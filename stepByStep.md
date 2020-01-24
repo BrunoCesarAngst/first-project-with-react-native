@@ -350,3 +350,19 @@ No index.js da Main criamos o component `<List />` com os dados de cada usuário
 ## Loading e disabled
 
 No index.js da Main aplicamos o loading e o estilizamos
+
+## Salvando no storage
+
+Salvando as informações no banco de dados do device
+
+```bash
+yarn add @react-native-community/async-storage
+# no android
+yarn run-android
+# ou no ios
+cd ios/
+pod install
+yarn run-ios
+# e rodar novamente
+yarn react-native run-android # ou run-ios
+```
