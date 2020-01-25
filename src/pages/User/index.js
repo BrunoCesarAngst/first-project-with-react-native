@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Validações das propriedades
 import PropTypes from 'prop-types';
 import api from '../../services/api';
 

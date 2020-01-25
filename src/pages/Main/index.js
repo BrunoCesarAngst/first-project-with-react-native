@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Validações das propriedades
 import PropTypes from 'prop-types';
 // Keyboard é o teclado e ActivityIndicator é o sinal de loading
 import { Keyboard, ActivityIndicator } from 'react-native';
@@ -23,7 +24,15 @@ import {
 } from './styles';
 
 export default class Main extends Component {
+  // TEST
+  // static navigationOptions = {
+  //   title: 'Usuários',
+  // };
+
+  /* PropTypes exporta uma variedade de validadores que podem ser usados para certificar que os dados que você recebe são válidos e só para as propriedades
+  que estão em uso no componente */
   static propTypes = {
+    /* PropTypes.shape pode ser usado quando uma validação mais detalhada de um objeto prop é necessária. Ele garante que o suporte seja um objeto que contenha um conjunto de chaves especificadas com valores dos tipos especificados. */
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
     }).isRequired,
@@ -93,9 +102,16 @@ export default class Main extends Component {
     Keyboard.dismiss();
   };
 
+  // método para lincar as páginas recebendo o usuário como parâmetro
   handleNavigate = user => {
+    // pegando a função navigate
     const { navigation } = this.props;
 
+    /**
+     * indicando a tela/rota, contendo todos os parâmetros que são recebidos
+     * nessa rota, então ela precisa receber essa propriedades que estão sendo
+     * validadas no PropTypes
+     */
     navigation.navigate('User', { user });
   };
 
@@ -143,7 +159,7 @@ export default class Main extends Component {
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
-              {/* ouvindo o click do botão */}
+              {/* ouvindo o click do botão para direcionar para a outra página com os dados do usuário */}
               <ProfileButton onPress={() => this.handleNavigate(item)}>
                 <ProfileButtonText>Ver perfil</ProfileButtonText>
               </ProfileButton>

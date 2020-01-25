@@ -103,13 +103,13 @@ module.exports = {
   env: {
     es6: true,
   },
-  extends: ['airbnb', 'prettier', 'prettier/react'], // TODO
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
     __DEV__: 'readonly',
   },
-  parser: 'babel-eslint', // TODO
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -119,33 +119,29 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error', // TODO
+    'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
-      // TODO
-      'warn', // TODO
+      'warn',
       {
-        extensions: ['.jsx', '.js'], // TODO
+        extensions: ['.jsx', '.js'],
       },
     ],
-    'import/prefer-default-export': 'off', // TODO
-    'no-console': 'off', // TODO
+    'import/prefer-default-export': 'off',
+    'no-console': 'off',
     'no-restricted-syntax': [
-      // TODO
-      'error', // TODO
+      'error',
       {
-        // TODO
         selector:
-          "CallExpression[callee.object.name='console'][callee.property. // TODOname!=/^(log|warn|error|info|trace)$/]", // TODO
-        message: 'Unexpected property on console object was called', // TODO
+          "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        message: 'Unexpected property on console object was called',
       },
     ],
     'no-unused-vars': [
-      // TODO
-      'error', // TODO
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: false }, // TODO
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
     ],
-    'react/state-in-constructor': ['error', 'never'], // TODO
-    'react/static-property-placement': ['error', 'static public field'], // TODO
+    'react/state-in-constructor': ['error', 'never'],
+    'react/static-property-placement': ['error', 'static public field'],
   },
 };
 ```
@@ -365,4 +361,13 @@ pod install
 yarn run-ios
 # e rodar novamente
 yarn react-native run-android # ou run-ios
+```
+
+## Realizando navegação
+
+Usando PropTypes nos componentes para exportar validadores que podem ser usados para certificar que os dados que você recebe são válidos para as propriedades que estão em uso no componente
+
+```bash
+# para fazer a validação das propriedades
+yarn add prop-types
 ```
