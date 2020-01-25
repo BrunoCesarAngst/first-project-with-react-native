@@ -371,3 +371,20 @@ Usando PropTypes nos componentes para exportar validadores que podem ser usados 
 # para fazer a validação das propriedades
 yarn add prop-types
 ```
+
+## Buscando dados da API
+
+Usando o navigation
+
+Cada screen componente do seu aplicativo é fornecido com o navigation suporte automaticamente. O suporte contém várias funções de conveniência que despacham ações de navegação no roteador da rota. Se parece com isso:
+
+this.props.navigation
+navigate - vá para outra tela, descobre as ações necessárias para fazê-lo
+goBack - feche a tela ativa e volte para a pilha
+addListener - assine atualizações no ciclo de vida da navegação
+isFocused- função que retorna true se a tela estiver focada ou false não.
+state - estado atual / rotas
+setParams - faça alterações nos parâmetros da rota
+getParam - obtenha um parâmetro específico com fallback
+dispatch - envia uma ação ao roteador
+dangerouslyGetParent - função que retorna o navegador pai, se houver

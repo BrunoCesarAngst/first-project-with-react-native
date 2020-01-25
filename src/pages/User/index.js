@@ -19,6 +19,7 @@ import {
 } from './styles';
 
 export default class User extends Component {
+  /* navigationOptions como uma função que recebe navigation e retorna um objeto com as propriedades e atributos da nossa navegação */
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('user').name,
   });
@@ -46,6 +47,7 @@ export default class User extends Component {
     const { navigation } = this.props;
     const user = navigation.getParam('user');
 
+    /* os favoritos do usuário */
     const response = await api.get(`/users/${user.login}/starred`, {
       params: { page },
     });
