@@ -98,13 +98,17 @@ export default class User extends Component {
         {loading ? (
           <Loading />
         ) : (
+          /* a lista de favoritos */
           <Stars
+            /* o array de favoritos */
             data={stars}
             onRefresh={this.refreshing}
             refreshing={refreshing}
             onEndReachedThreshold={0.2}
             onEndReached={this.loadMore}
+            /* o elemento único de cada star */
             keyExtractor={star => String(star.id)}
+            /* para renderizar cada item/star da stars */
             renderItem={({ item }) => (
               <Starred onPress={() => this.handleNavigate(item)}>
                 <OwnerAvatar source={{ uri: item.owner.avatar_url }} />

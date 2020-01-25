@@ -388,3 +388,7 @@ setParams - faça alterações nos parâmetros da rota
 getParam - obtenha um parâmetro específico com fallback
 dispatch - envia uma ação ao roteador
 dangerouslyGetParent - função que retorna o navegador pai, se houver
+
+## Listando favoritos
+
+Trabalhamos no arquivo User.js para mostrar os repositórios favoritados pelo usuários cadastrados

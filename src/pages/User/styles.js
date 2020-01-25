@@ -48,6 +48,7 @@ export const Loading = styled.ActivityIndicator.attrs({
 `;
 
 export const Stars = styled.FlatList.attrs({
+  /* tirando a barra de rolagem */
   showsVerticalScrollIndicator: false,
 })`
   margin-top: 20px;
@@ -66,15 +67,17 @@ export const OwnerAvatar = styled.Image`
   width: 42px;
   height: 42px;
   border-radius: 21px;
-  background: #Eee;
+  background: #eee;
 `;
 
 export const Info = styled.View`
   margin-left: 10px;
+  /* para assumir o restante da tela */
   flex: 1;
 `;
 
 export const Title = styled.Text.attrs({
+  /* fixando uma linha */
   numberOfLines: 1,
 })`
   font-size: 15px;
