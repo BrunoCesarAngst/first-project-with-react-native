@@ -6,4 +6,4 @@ Esse projeto desenvolvido em React Native consome a API do github, trazendo algu
 
 Foi usada as seguintes ferramentas e configurações:
 
-EditorConfig, ESLint, Prettier, Commitlint, Husky, Commitizen, Reactotron
+EditorConfig, ESLint, Prettier, Commitlint, Husky, Commitizen, Reactotron, Axios, StackNavigator, state e setState, ciclo de vida, AsyncStorage, PropTypes, Loading, uso de atributos do componente dentro da estilização, paginação, refreshing da página, scroll infinito e WebView

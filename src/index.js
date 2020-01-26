@@ -1,8 +1,6 @@
 import React from 'react';
 // Status bar é um componente
 import { StatusBar } from 'react-native';
-import 'react-native-gesture-handler';
-
 // Tudo o que criamos deixamos depois do Reactotron
 import './config/ReactotronConfig';
 // Importamos o roteamento com as páginas
